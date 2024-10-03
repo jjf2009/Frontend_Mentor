@@ -47,30 +47,35 @@ body {
 
 .news {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 3.2rem;
 }
 
 .main-news-img {
   max-width: 80rem;
-  /* max-height: 30rem; */
+  height: auto;
 }
+
 .main-news-text {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   margin-top: 2rem;
-  justify-items: start;
 }
+
 .main-headline {
   font-size: 5.2rem;
   font-weight: bold;
 }
+
 .main-news-parah {
   padding: 0 8.4rem;
 }
+
 .main-news-description {
   font-size: 1.6rem;
   color: hsl(236, 13%, 42%);
 }
+
 .main-news-button:link,
 .main-news-button:visited {
   display: inline-block;
@@ -83,6 +88,7 @@ body {
   padding: 1.2rem 2.4rem;
   transition: all 0.3s;
 }
+
 .main-news-button:hover,
 .main-news-button:active {
   background-color: hsl(240, 100%, 5%);
@@ -97,13 +103,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-left: 3.2rem;
 }
+
 .heading-secondary {
   font-size: 3.2rem;
   margin-bottom: 2.4rem;
   color: hsl(35, 77%, 62%);
 }
+
 .heading-tertiary {
   font-size: 2rem;
   margin-bottom: 0.8rem;
@@ -127,33 +134,53 @@ body {
 .section-more {
   padding: 3.2rem 12.8rem 3.2rem 12.8rem;
 }
+
 .more-news {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
+  gap: 3.2rem;
 }
+
 .news-1,
 .news-2,
 .news-3 {
   display: flex;
   gap: 1rem;
 }
+
 .image {
   width: 6.4rem;
 }
+
 .news-number {
-  font-size: 2.4rem;
-  color: hsl(236, 13%, 42%);
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: hsl(233, 8%, 79%);
 }
+
 .news-head {
   font-size: 1.6rem;
+  margin-bottom: 0.8rem;
 }
+
+.news-head:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
 .news-description {
-  color: hsl(236, 13%, 42%);
   font-size: 1.4rem;
-  margin-top: 0.6rem;
-  width: 70%;
+  color: hsl(236, 13%, 42%);
 }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+/**************************/
+/* RESPONSIVE DESIGN */
+/**************************/
 
 @media (max-width: 80em) {
   html {
@@ -166,39 +193,33 @@ body {
     max-width: 60rem;
   }
 }
+
 @media (max-width: 59em) {
   html {
     font-size: 37.5%;
   }
-  .header {
-    padding: 2.4rem 8rem 2.4rem 8rem;
-  }
-  .main-news-img {
-    max-width: 100%;
-  }
   .news {
-    gap: 3.2rem;
     grid-template-columns: 1fr;
-    align-items: start;
-  }
-  .section-news {
-    padding: 2.4rem 8rem 2.4rem 8rem;
   }
   .latest-news {
-    margin-left: 0;
-  }
-  .section-more {
-    padding: 3.2rem 8rem 3.2rem 8rem;
+    padding: 1rem;
   }
 }
+
 @media (max-width: 38em) {
+  html {
+    font-size: 35%;
+  }
   .header,
   .section-news,
   .section-more {
-    padding: 2.4rem 4.4rem 2.4rem 4.4rem;
+    padding: 2.4rem 2rem;
+  }
+  .main-news-img {
+    max-width: 100%;
+    height: auto;
   }
   .more-news {
     grid-template-columns: 1fr;
-    gap: 1.6rem;
   }
 }
